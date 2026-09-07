@@ -1,0 +1,22 @@
+# RFC: GMV v2.0.0 — reconhecimento por faturamento
+Status: Proposed → Approved
+Artefato: metrics/gmv
+Owners: @dados-owner, @ana-analytics
+Cutover: 2025-10-01 10:00 America/Sao_Paulo
+Janela de convivência: 60 dias (sunset em 2025-11-30)
+
+Resumo
+- Remover “autorizado” do escopo do GMV; manter apenas pedidos faturados.
+
+Análise de impacto
+- Dashboards que exibem GMV diário terão queda média de 3–7%.
+- ROAS/LTV precisam alinhar origem de receita com GMV v2 (nota de migração).
+
+Migração
+- Publicar GMV v1 e v2 lado a lado (switch no dashboard).
+- Gerar evidência de reconciliação v1→v2: EVIDENCIAS/reconc_v1_v2.csv.
+- Comunicação: banner + e-mail a stakeholders (lista A/B).
+
+Back-out
+- Rollback tag: metrics/gmv@1.9.3.
+- Procedimento: editar feature flag no dashboard, reverter fonte.
