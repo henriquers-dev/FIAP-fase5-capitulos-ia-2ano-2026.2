@@ -1,0 +1,10 @@
+# Exemplo de Metric Contract (YAML)
+name: GMV
+description: Sum of gross order values for eligible orders
+window:
+  - D-1
+  - D-0
+eligibility:
+  - test_order == false
+  - fraud_flag == false
+version: 1.2.0
