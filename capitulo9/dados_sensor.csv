@@ -1,0 +1,20 @@
+Parametro,Valor,Descricao
+Sensor,MPU6050,Acelerômetro utilizado no projeto
+Microcontrolador,ESP32 Heltec V2,Placa utilizada para leitura do sensor
+Comunicação,I2C,Protocolo de comunicação entre ESP32 e MPU6050
+SDA,GPIO 21,Pino de dados I2C
+SCL,GPIO 22,Pino de clock I2C
+Baud Rate,115200,Velocidade da comunicação serial
+Faixa do acelerômetro,±4g,Faixa configurada para medir aceleração
+Sensibilidade,8192 LSB/g,Fator usado para converter dados brutos para g
+Filtro DLPF,20 Hz,Filtro digital configurado no MPU6050
+Amostras de calibração,100,Quantidade de leituras usadas para calcular os offsets
+Intervalo entre leituras,200 ms,Tempo entre cada leitura do sensor
+Offset X,Calculado na calibração,Média das leituras do eixo X com o sensor parado
+Offset Y,Calculado na calibração,Média das leituras do eixo Y com o sensor parado
+Offset Z,Média - 8192,Compensa a gravidade de aproximadamente 1g no eixo Z
+Saída AX_g,g,Aceleração calibrada no eixo X
+Saída AY_g,g,Aceleração calibrada no eixo Y
+Saída AZ_g,g,Aceleração calibrada no eixo Z
+Formato de saída,"AX_g,AY_g,AZ_g",Formato recomendado para salvar as leituras em CSV
+Condição de calibração,Sensor parado,O MPU6050 deve permanecer imóvel durante a calibração
