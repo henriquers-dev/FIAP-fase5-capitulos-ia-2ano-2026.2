@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Saudação -->
+<category>
+    <pattern>OLÁ</pattern>
+    <template>Olá! Como você está?</template>
+</category>
+
+<!-- Pergunta sobre sentimentos -->
+<category>
+    <pattern>ESTOU *</pattern>
+    <template>Por que você está <star/>?</template>
+</category>
+
+<!-- Preferências -->
+<category>
+    <pattern>EU GOSTO DE *</pattern>
+    <template>Por que você gosta de <star/>?</template>
+</category>
+
+<!-- Despedida -->
+<category>
+    <pattern>TCHAU</pattern>
+    <template>Até logo! Foi bom conversar com você.</template>
+</category>
+
+<!-- Resposta padrão -->
+<category>
+    <pattern>*</pattern>
+    <template>Interessante... fale mais sobre isso.</template>
+</category>
+
+</aiml>
